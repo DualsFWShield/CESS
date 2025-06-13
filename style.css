@@ -39,15 +39,16 @@ section { padding: 80px 0; }
 
 .section-title {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px; /* Plus d'espace sous le titre */
 }
 .section-title i {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Taille augmentée pour les icônes */
+    margin: 20px 0; /* Ajout d'espace au-dessus et en dessous */
+    display: block; /* S'assure que l'icône est centré */
     color: var(--c-secondary);
     background-image: linear-gradient(135deg, var(--c-secondary), #8e44ad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
 }
 .section-title h2 {
     font-family: var(--font-heading);
@@ -73,11 +74,17 @@ section { padding: 80px 0; }
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px; /* Augmentation des marges internes */
     overflow: hidden; /* Empêche les débordements */
 }
 .hero-content { animation: fadeIn 1.2s ease-out; }
-.hero .logo { max-width: 250px; margin-bottom: 25px; filter: brightness(0) invert(1); }
+.hero .logo {
+    max-width: 400px; /* Taille maximale du logo */
+    margin: 0 auto 25px auto; /* Centre horizontalement et ajoute un espace en bas */
+    filter: brightness(0) invert(1);
+    display: block; /* S'assure que le logo est un bloc centré */
+    transform: scale(1.2); /* Agrandissement du logo */
+}
 .hero h1 { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
 .hero .subtitle { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 300; margin: 15px auto 40px; max-width: 600px; opacity: 0.9; }
 .cta-button {
@@ -104,11 +111,30 @@ section { padding: 80px 0; }
 .timeline::before { content: ''; position: absolute; width: 3px; background-color: var(--c-border); top: 0; bottom: 0; left: 20px; }
 .timeline-item {
     position: relative;
-    padding-left: 70px; /* Augmentation de l'espace pour les icônes */
-    margin-bottom: 50px; /* Plus d'espace entre les éléments */
+    padding-left: 80px; /* Plus d'espace pour les icônes */
+    margin-bottom: 60px; /* Plus d'espace entre les éléments */
 }
 .timeline-item:last-child { margin-bottom: 0; }
-.timeline-icon { position: absolute; left: 0; top: 0; width: 40px; height: 40px; background: var(--c-secondary); color: var(--c-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border: 4px solid var(--c-bg); }
+.timeline-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px; /* Taille augmentée pour les icônes */
+    height: 50px;
+    background: var(--c-secondary);
+    color: var(--c-white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem; /* Taille de police augmentée */
+    margin-right: 10px; /* Espacement entre l'icône et le contenu */
+    border: 4px solid var(--c-bg);
+}
+.timeline-icon i {
+    margin: 10px 0; /* Ajout d'espace au-dessus et en dessous */
+    display: inline-block; /* S'assure que l'icône est bien positionnée */
+}
 .timeline-content {
     background: var(--c-white);
     padding: 30px; /* Augmentation des marges internes */
@@ -120,11 +146,11 @@ section { padding: 80px 0; }
 .timeline-content p { color: var(--c-text-light); margin-top: 5px; }
 
 /* ================= GRILLE D'ÉVALUATION ================= */
-.criteria-grid { display: flex; flex-direction: column; gap: 20px; }
+.criteria-grid { display: flex; flex-direction: column; gap: 30px; /* Plus d'espace entre les critères */ }
 .criterion-accordion .accordion-toggle { display: none; }
 .accordion-header {
     background: var(--c-white);
-    padding: 20px 25px;
+    padding: 25px 30px; /* Augmentation des marges internes */
     border-radius: 12px;
     cursor: pointer;
     display: flex;
@@ -133,6 +159,7 @@ section { padding: 80px 0; }
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     border-left: 5px solid;
+    text-align: left; /* Alignement du texte à gauche */
 }
 .accordion-header:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 .theme-pertinence { border-color: var(--c-pertinence); }
@@ -146,6 +173,7 @@ section { padding: 80px 0; }
     font-weight: 800;
     font-family: var(--font-heading);
     background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-left: auto; /* Aligne les points à droite */
 }
 .theme-pertinence .points { background-image: linear-gradient(45deg, var(--c-pertinence), #5e35b1); }
 .theme-intelligibilite .points { background-image: linear-gradient(45deg, var(--c-intelligibilite), #00796b); }
@@ -192,22 +220,23 @@ section { padding: 80px 0; }
 .indicator-card {
     background: var(--c-white);
     border: 1px solid var(--c-border);
-    padding: 25px; /* Augmentation des marges internes */
+    padding: 30px; /* Augmentation des marges internes */
     border-radius: 8px;
     max-width: 100%; /* S'assure que la carte ne dépasse pas */
     overflow: hidden; /* Empêche les débordements */
     box-shadow: var(--shadow-md);
+    text-align: left; /* Alignement du texte à gauche */
 }
 
 .indicator-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Plus d'espace sous le titre */
 }
 
 .indicator-title h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Taille augmentée pour le titre */
     color: var(--c-primary);
     margin: 0;
 }
@@ -224,7 +253,7 @@ section { padding: 80px 0; }
 .indicator-desc {
     font-size: 1rem; /* Augmentation de la taille de la police */
     color: var(--c-text-light);
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Plus d'espace sous la description */
     line-height: 1.5; /* Amélioration de la lisibilité */
 }
 
@@ -263,14 +292,20 @@ section { padding: 80px 0; }
 
 /* ================= WARNINGS & FOOTER ================= */
 #warnings .section-title i { color: var(--c-warning); background-image: linear-gradient(135deg, var(--c-warning), #c0392b); }
-.warnings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.warnings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Plus d'espace entre les cartes */
+}
 .warning-card {
     background: var(--c-white);
-    padding: 35px; /* Augmentation des marges internes */
+    padding: 50px; /* Augmentation des marges internes */
     border-radius: 12px;
     border-left: 6px solid var(--c-warning); /* Accentuation de la bordure */
     box-shadow: var(--shadow-md);
     overflow: hidden; /* Empêche les débordements */
+    text-align: left; /* Alignement du texte à gauche */
+    margin-bottom: 20px; /* Ajout d'espace entre les cartes */
 }
 .warning-card h3 { color: var(--c-warning); margin-bottom: 10px; }
 
@@ -326,17 +361,16 @@ footer { background: var(--c-primary); color: rgba(255,255,255,0.7); text-align:
 
 /* ================= RESPONSIVE ================= */
 @media(max-width: 768px) {
-    .section-title h2 { font-size: 2rem; }
-    .warnings-grid { grid-template-columns: 1fr; }
-    .timeline::before { left: 20px; }
+    .section-title {
+        margin-bottom: 60px; /* Réduction de l'espace sous le titre */
+    }
+
     .timeline-item {
-        padding-left: 80px; /* Ajustement pour les petits écrans */
+        padding-left: 60px; /* Réduction de l'espace pour les icônes */
     }
-    .timeline-icon { left: 0; }
-    .indicator-card {
-        padding: 20px; /* Réduction des marges internes */
-    }
-    .warning-card {
-        padding: 25px; /* Réduction des marges internes */
+
+    .warnings-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+        gap: 30px; /* Réduction de l'espace entre les cartes */
     }
 }

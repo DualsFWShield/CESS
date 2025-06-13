@@ -72,57 +72,190 @@
         </section>
 
         <section id="criteres" class="container">
-            <h2><i class="fas fa-clipboard-check"></i> Grille d'Évaluation Détaillée (/100)</h2>
-            <div class="criteria-grid">
-                <!-- Critère 1: Accordéon -->
-                <article class="criterion-card">
-                    <input type="checkbox" id="crit1" class="accordion-toggle">
-                    <label for="crit1" class="accordion-header" style="--gradient-start: #3498db; --gradient-end: #2980b9;">
-                        <h3>1. Pertinence & Contenu</h3>
-                        <div class="points">/ 60</div>
-                    </label>
-                    <div class="details">
-                        <ul>
-                            <li><strong>Sélection des infos (/30) :</strong> Pertinence, suffisance, fidélité et référencement.</li>
-                            <li><strong>Reformulation (/19) :</strong> Style personnel, ton neutre, concision.</li>
-                            <li><strong>Organisation des infos (/11) :</strong> Reprise de la question, mise en réseau logique.</li>
+    <h2><i class="fas fa-clipboard-check"></i> Grille d'Évaluation Détaillée (/100)</h2>
+    <div class="criteria-grid">
+        <!-- =================================================== -->
+        <!-- ==        CRITÈRE 1: PERTINENCE & CONTENU        == -->
+        <!-- =================================================== -->
+        <article class="criterion-card">
+            <input type="checkbox" id="crit1" class="accordion-toggle">
+            <label for="crit1" class="accordion-header" style="--gradient-start: #3498db; --gradient-end: #2980b9;">
+                <h3>1. Pertinence & Contenu</h3>
+                <div class="points">/ 60</div>
+            </label>
+            <div class="details">
+                <!-- 1.1 Sélection des informations -->
+                <div class="sub-criterion">
+                    <h4>1.1 Sélection des informations <span class="sub-points">/ 30</span></h4>
+                    <div class="indicator">
+                        <h5><i class="fas fa-filter"></i> 1.1.1a. Pertinence des informations</h5>
+                        <ul class="point-breakdown">
+                            <li><span class="points-tag high">5 pts</span> Toutes les informations sont pertinentes pour la question.</li>
+                            <li><span class="points-tag mid">3 pts</span> 1 information n'est pas pertinente.</li>
+                            <li><span class="points-tag zero">0 pts</span> Plus d'1 information n'est pas pertinente.</li>
                         </ul>
                     </div>
-                </article>
+                    <div class="indicator">
+                        <h5><i class="fas fa-layer-group"></i> 1.1.1b. Suffisance des informations</h5>
+                        <p class="indicator-desc">Le maximum de points est attribué pour un nombre suffisant d'infos essentielles.</p>
+                        <ul class="point-breakdown scale">
+                            <li><span class="points-tag high">15</span></li>
+                            <li><span class="points-tag mid-high">12</span></li>
+                            <li><span class="points-tag mid">8</span></li>
+                            <li><span class="points-tag low">4</span></li>
+                            <li><span class="points-tag zero">0</span></li>
+                        </ul>
+                    </div>
+                    <div class="indicator">
+                        <h5><i class="fas fa-check-double"></i> 1.1.2. Fidélité au contenu</h5>
+                        <ul class="point-breakdown">
+                            <li><span class="points-tag high">5 pts</span> Informations conformes aux documents sources.</li>
+                            <li><span class="points-tag mid">2 pts</span> 1 erreur de conformité (contresens, extrapolation...).</li>
+                            <li><span class="points-tag zero">0 pts</span> Plus d'1 erreur de conformité.</li>
+                        </ul>
+                    </div>
+                    <div class="indicator">
+                        <h5><i class="fas fa-book-open"></i> 1.1.3. Références aux sources</h5>
+                        <ul class="point-breakdown">
+                            <li><span class="points-tag high">5 pts</span> Références correctes à toutes les sources.</li>
+                            <li><span class="points-tag zero">0 pts</span> Références incomplètes, erronées ou absentes.</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <!-- Critère 2: Accordéon -->
-                <article class="criterion-card">
-                    <input type="checkbox" id="crit2" class="accordion-toggle">
-                    <label for="crit2" class="accordion-header" style="--gradient-start: #2ecc71; --gradient-end: #27ae60;">
-                        <h3>2. Intelligibilité & Structure</h3>
-                        <div class="points">/ 15</div>
-                    </label>
-                    <div class="details">
-                         <ul>
-                            <li><strong>Progression thématique :</strong> Cohérence, absence de rupture logique.</li>
-                            <li><strong>Organisateurs textuels :</strong> Utilisation judicieuse des connecteurs.</li>
-                            <li><strong>Clarté :</strong> Compréhension aisée pour un lecteur externe.</li>
+                <!-- 1.2 Reformulation -->
+                <div class="sub-criterion">
+                    <h4>1.2 Reformulation <span class="sub-points">/ 19</span></h4>
+                    <div class="indicator">
+                        <h5><i class="fas fa-user-pen"></i> 1.2.1. Formulation personnelle</h5>
+                        <ul class="point-breakdown">
+                            <li><span class="points-tag high">8 pts</span> Formulation personnelle généralisée.</li>
+                            <li><span class="points-tag mid">5 pts</span> 1 "copier-coller" non justifié.</li>
+                            <li><span class="points-tag low">3 pts</span> 2 "copier-coller" non justifiés.</li>
+                            <li><span class="points-tag zero">0 pts</span> Plus de 2 "copier-coller" non justifiés.</li>
                         </ul>
                     </div>
-                </article>
+                    <div class="indicator">
+                        <h5><i class="fas fa-comment-slash"></i> 1.2.2. Énonciation distanciée (Objectivité)</h5>
+                        <ul class="point-breakdown">
+                            <li><span class="points-tag high">3 pts</span> Absence de marques de subjectivité (pas d'opinion).</li>
+                            <li><span class="points-tag zero">0 pts</span> Présence de marques de subjectivité.</li>
+                        </ul>
+                    </div>
+                    <div class="indicator">
+                        <h5><i class="fas fa-compress-alt"></i> 1.2.3. Concision</h5>
+                         <ul class="point-breakdown">
+                            <li><span class="points-tag high">8 pts</span> Concision généralisée (style direct, pas de redondances).</li>
+                            <li><span class="points-tag mid">5 pts</span> Concision suffisante.</li>
+                            <li><span class="points-tag low">3 pts</span> Concision partielle.</li>
+                            <li><span class="points-tag zero">0 pts</span> Absence de concision.</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <!-- Critère 3: Accordéon -->
-                <article class="criterion-card">
-                    <input type="checkbox" id="crit3" class="accordion-toggle">
-                    <label for="crit3" class="accordion-header" style="--gradient-start: #f1c40f; --gradient-end: #f39c12;">
-                        <h3>3. Recevabilité & Forme</h3>
-                        <div class="points">/ 25</div>
-                    </label>
-                    <div class="details">
-                         <ul>
-                            <li><strong>Orthographe :</strong> Qualité de l'orthographe grammaticale et d'usage.</li>
-                            <li><strong>Syntaxe et ponctuation :</strong> Construction des phrases et ponctuation.</li>
-                            <li><strong>Lexique :</strong> Vocabulaire précis, riche et adapté.</li>
+                <!-- 1.3 Organisation -->
+                <div class="sub-criterion">
+                    <h4>1.3 Organisation des informations <span class="sub-points">/ 11</span></h4>
+                    <div class="indicator">
+                        <h5><i class="fas fa-question-circle"></i> 1.3.1. Énoncé de la question</h5>
+                        <ul class="point-breakdown">
+                            <li><span class="points-tag high">3 pts</span> Reprise ou reformulation claire de la question posée.</li>
+                            <li><span class="points-tag zero">0 pts</span> Absence ou mauvaise reformulation de la question.</li>
                         </ul>
                     </div>
-                </article>
+                    <div class="indicator">
+                        <h5><i class="fas fa-project-diagram"></i> 1.3.2. Mise en réseau des informations</h5>
+                         <ul class="point-breakdown">
+                            <li><span class="points-tag high">8 pts</span> Mise en relation généralisée (idées croisées, regroupées).</li>
+                            <li><span class="points-tag mid">5 pts</span> Mise en relation suffisante.</li>
+                            <li><span class="points-tag low">3 pts</span> Mise en relation partielle (succession de résumés).</li>
+                            <li><span class="points-tag zero">0 pts</span> Absence de mise en relation (simple juxtaposition).</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </section>
+        </article>
+
+        <!-- =================================================== -->
+        <!-- ==       CRITÈRE 2: INTELLIGIBILITÉ              == -->
+        <!-- =================================================== -->
+        <article class="criterion-card">
+            <input type="checkbox" id="crit2" class="accordion-toggle">
+            <label for="crit2" class="accordion-header" style="--gradient-start: #2ecc71; --gradient-end: #27ae60;">
+                <h3>2. Intelligibilité & Structure</h3>
+                <div class="points">/ 15</div>
+            </label>
+            <div class="details">
+                 <div class="sub-criterion">
+                    <h4>2.1 Progression thématique <span class="sub-points"></span></h4>
+                    <p class="indicator-desc">La lecture est-elle fluide et logique ?</p>
+                    <ul class="point-breakdown">
+                        <li><span class="points-tag high">3 pts</span> Aucune erreur (incohérence, rupture, lien trop implicite).</li>
+                        <li><span class="points-tag mid">2 pts</span> 1 erreur.</li>
+                        <li><span class="points-tag low">1 pt</span> 2 erreurs.</li>
+                        <li><span class="points-tag zero">0 pts</span> Plus de 2 erreurs.</li>
+                    </ul>
+                </div>
+                <div class="sub-criterion">
+                    <h4>2.2 Organisateurs textuels <span class="sub-points"></span></h4>
+                    <p class="indicator-desc">Les mots de liaison (connecteurs) sont-ils bien utilisés ?</p>
+                    <ul class="point-breakdown">
+                        <li><span class="points-tag high">6 pts</span> Aucune ou 1 erreur.</li>
+                        <li><span class="points-tag mid">4 pts</span> 2 ou 3 erreurs.</li>
+                        <li><span class="points-tag low">2 pts</span> 4 ou 5 erreurs.</li>
+                        <li><span class="points-tag zero">0 pts</span> Plus de 5 erreurs.</li>
+                    </ul>
+                </div>
+                <div class="sub-criterion">
+                    <h4>2.3 Clarté pour le lecteur <span class="sub-points"></span></h4>
+                    <ul class="point-breakdown">
+                        <li><span class="points-tag high">6 pts</span> Compréhension aisée du texte.</li>
+                        <li><span class="points-tag mid">2 pts</span> 1 information incompréhensible.</li>
+                        <li><span class="points-tag zero">0 pts</span> Plus d'1 information incompréhensible.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        
+        <!-- =================================================== -->
+        <!-- ==         CRITÈRE 3: RECEVABILITÉ               == -->
+        <!-- =================================================== -->
+        <article class="criterion-card">
+            <input type="checkbox" id="crit3" class="accordion-toggle">
+            <label for="crit3" class="accordion-header" style="--gradient-start: #f1c40f; --gradient-end: #f39c12;">
+                <h3>3. Recevabilité & Forme</h3>
+                <div class="points">/ 25</div>
+            </label>
+            <div class="details">
+                <p class="indicator-desc large">Les points pour ces 3 catégories sont attribués en fonction du nombre d'erreurs par rapport à la longueur de la production.</p>
+                <div class="sub-criterion">
+                    <h4>3.1 Orthographe <span class="sub-points">/ 10</span></h4>
+                    <ul class="point-breakdown scale wide">
+                        <li><span class="points-tag high">10</span></li>
+                        <li><span>9</span></li><li><span>8</span></li><li><span>7</span></li><li><span>6</span></li><li><span>5</span></li><li><span>4</span></li><li><span>3</span></li><li><span>2</span></li><li><span>1</span></li>
+                        <li><span class="points-tag zero">0</span></li>
+                    </ul>
+                </div>
+                 <div class="sub-criterion">
+                    <h4>3.2 Syntaxe et Ponctuation <span class="sub-points">/ 10</span></h4>
+                    <ul class="point-breakdown scale wide">
+                        <li><span class="points-tag high">10</span></li>
+                        <li><span>9</span></li><li><span>8</span></li><li><span>7</span></li><li><span>6</span></li><li><span>5</span></li><li><span>4</span></li><li><span>3</span></li><li><span>2</span></li><li><span>1</span></li>
+                        <li><span class="points-tag zero">0</span></li>
+                    </ul>
+                </div>
+                 <div class="sub-criterion">
+                    <h4>3.3 Lexique <span class="sub-points">/ 5</span></h4>
+                    <ul class="point-breakdown scale">
+                         <li><span class="points-tag high">5</span></li>
+                         <li><span>4</span></li><li><span>3</span></li><li><span>2</span></li><li><span>1</span></li>
+                         <li><span class="points-tag zero">0</span></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
         
         <section id="warnings" class="container">
             <h2><i class="fas fa-exclamation-triangle"></i> Points d'Attention Cruciaux</h2>
